@@ -2,7 +2,7 @@ import { Box, Flex, Text, Link, Divider, VStack, Heading } from '@chakra-ui/reac
 
 const Footer = () => {
   return (
-    <Box as="footer" py="4" mt="auto">
+    <Box as="footer" py="4" px={'4'} mt="auto">
       <Divider mb="4" />
       <VStack spacing={{ base: '4', md: '8' }} align="start">
         {/* Social Links Section */}
