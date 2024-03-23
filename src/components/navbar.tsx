@@ -34,6 +34,13 @@ const Navbar = () => {
                 // For example, you can fetch the user's accounts
                 const accounts = await web3.eth.getAccounts();
                 dispatch(connectWalletSuccess(accounts));
+                toast({
+                    title: 'Wallet Connected',
+                    description: `Your wallet ${accounts} has been successfully connected.`,
+                    status: 'success',
+                    duration: 9000,
+                    isClosable: true,
+                });
                 console.log('Connected accounts:', accounts);
             } catch (error) {
                 dispatch(connectWalletFailure((error as Error).message));
