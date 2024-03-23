@@ -43,10 +43,10 @@ const MarketplaceSection = () => {
       </Heading>
 
       {/* Marketplace Content */}
-      <VStack spacing="8" align="stretch">
+      <VStack spacing="4" align="stretch">
         {/* Featured Items */}
         <Box>
-          <Heading size="md" mb="4">Featured Items</Heading>
+          <Heading px={'4'} size="md" mb="4">Featured Items</Heading>
           <Flex wrap="wrap" justify="center">
             {featuredItems.map((item) => (
               <Box key={item.id} w="100%" maxW="400px" borderWidth="1px" borderRadius="lg" overflow="hidden" m="2">
