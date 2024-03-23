@@ -1,3 +1,4 @@
+import { MoonIcon, SunIcon } from '@chakra-ui/icons';
 import {
     Flex,
     Box,
@@ -40,7 +41,7 @@ const Navbar = () => {
             <Box>
                 <Button mr="2">Connect Wallet</Button>
                 <Button onClick={toggleColorMode}>
-                    {colorMode === 'light' ? 'Dark' : 'Light'} Mode
+                    {colorMode === 'light' ? <SunIcon /> : <MoonIcon />}
                 </Button>
             </Box>
         </Flex>
