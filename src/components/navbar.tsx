@@ -6,6 +6,7 @@ import {
     Button,
     Spacer,
     useColorMode,
+    useToast, // Import useToast hook
 } from '@chakra-ui/react';
 import { useDispatch } from 'react-redux';
 import { connectWalletSuccess, connectWalletFailure } from '../features/walletSlice'; // Importing the Redux actions
@@ -17,6 +18,7 @@ const Navbar = () => {
     const { colorMode, toggleColorMode } = useColorMode();
     const dispatch = useDispatch(); // Get dispatch function from Redux
     const { accounts, connected } = useAppSelector((state) => state.wallet);
+    const toast = useToast(); // Initialize useToast hook
 
     const handleConnectWallet = async () => {
         // Check if MetaMask is installed
@@ -38,7 +40,14 @@ const Navbar = () => {
                 console.error('Error connecting to MetaMask:', (error as Error).message);
             }
         } else {
-            console.error('MetaMask not detected. Please install MetaMask to connect your wallet.');
+            // Show toast message if MetaMask is not installed
+            toast({
+                title: "MetaMask Not Detected",
+                description: "Please install MetaMask to connect your wallet.",
+                status: "warning",
+                duration: 5000, // Display duration
+                isClosable: true, // Allow to close
+            });
         }
     };
 
