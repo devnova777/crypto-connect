@@ -2,18 +2,18 @@ import { MoonIcon, SunIcon } from '@chakra-ui/icons';
 import {
     Flex,
     Box,
-    Heading,
+    Image,
     Button,
     Spacer,
     useColorMode,
-    useTheme
+    // useTheme
 } from '@chakra-ui/react';
 
 const Navbar = () => {
     const { colorMode, toggleColorMode } = useColorMode();
-    const theme = useTheme();
+    // const theme = useTheme();
 
-    const gradient = `linear-gradient(to-br, ${theme.colors.primary['500']}, ${theme.colors.secondary['500']})`;
+    // const gradient = `linear-gradient(to-br, ${theme.colors.primary['500']}, ${theme.colors.secondary['500']})`;
 
     return (
         <Flex
@@ -24,7 +24,7 @@ const Navbar = () => {
             borderBottom="1px solid"
             borderColor="gray.200"
         >
-            <Flex align="center">
+            {/* <Flex align="center">
                 <Heading
                     as="h1"
                     size="md"
@@ -36,7 +36,8 @@ const Navbar = () => {
                 >
                     CryptoConnect
                 </Heading>
-            </Flex>
+            </Flex> */}
+            <Image src={'/icon.jpg'} alt="CryptoConnect Icon" boxSize="48px" mr="4" /> 
             <Spacer />
             <Box>
                 <Button mr="2">Connect Wallet</Button>
