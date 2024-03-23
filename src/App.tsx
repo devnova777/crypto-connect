@@ -1,3 +1,4 @@
+import EducationalResourcesSection from "./components/education-resource-section";
 import HeroSection from "./components/hero-section";
 import MarketplaceSection from "./components/marketplace-sectin";
 import Navbar from "./components/navabr";
@@ -10,6 +11,7 @@ export default function App() {
       <HeroSection />
       <TokenDashboardSection />
       <MarketplaceSection />
+      <EducationalResourcesSection />
     </div>
   )
 }
