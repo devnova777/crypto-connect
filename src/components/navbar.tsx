@@ -7,14 +7,16 @@ import {
     Spacer,
     useColorMode,
 } from '@chakra-ui/react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { connectWalletSuccess, connectWalletFailure } from '../features/walletSlice'; // Importing the Redux actions
 import Web3 from 'web3';
+
+import { useAppSelector } from '../app/store';
 
 const Navbar = () => {
     const { colorMode, toggleColorMode } = useColorMode();
     const dispatch = useDispatch(); // Get dispatch function from Redux
-    const {accounts, connected} = useSelector(state => state.wallet);
+    const { accounts, connected } = useAppSelector((state) => state.wallet);
 
     const handleConnectWallet = async () => {
         // Check if MetaMask is installed
