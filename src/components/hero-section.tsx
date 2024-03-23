@@ -1,4 +1,3 @@
-import React from 'react';
 import { Flex, Box, Heading, Text, Button, useColorModeValue } from '@chakra-ui/react';
 
 const HeroSection = () => {
