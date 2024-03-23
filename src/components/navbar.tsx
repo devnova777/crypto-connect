@@ -6,14 +6,11 @@ import {
     Button,
     Spacer,
     useColorMode,
-    // useTheme
 } from '@chakra-ui/react';
+import handleConnectWallet from '../ilb/connect-wallet';
 
 const Navbar = () => {
     const { colorMode, toggleColorMode } = useColorMode();
-    // const theme = useTheme();
-
-    // const gradient = `linear-gradient(to-br, ${theme.colors.primary['500']}, ${theme.colors.secondary['500']})`;
 
     return (
         <Flex
@@ -24,23 +21,10 @@ const Navbar = () => {
             borderBottom="1px solid"
             borderColor="gray.200"
         >
-            {/* <Flex align="center">
-                <Heading
-                    as="h1"
-                    size="md"
-                    bgGradient={gradient}
-                    bgClip="text"
-                    fontWeight="bold"
-                    lineHeight="1"
-                    letterSpacing="wide"
-                >
-                    CryptoConnect
-                </Heading>
-            </Flex> */}
-            <Image src={'/icon.jpg'} alt="CryptoConnect Icon" boxSize="48px" mr="4" /> 
+            <Image src={'/icon.jpg'} alt="CryptoConnect Icon" boxSize="48px" mr="4" />
             <Spacer />
             <Box>
-                <Button mr="2">Connect Wallet</Button>
+                <Button mr="2" onClick={handleConnectWallet}>Connect Wallet</Button>
                 <Button onClick={toggleColorMode}>
                     {colorMode === 'light' ? <SunIcon /> : <MoonIcon />}
                 </Button>
