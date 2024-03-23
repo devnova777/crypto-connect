@@ -70,7 +70,7 @@ const Navbar = () => {
             <Image src={'/icon.jpg'} alt="CryptoConnect Icon" boxSize="48px" mr="4" />
             <Spacer />
             <Box>
-                <Button mr="2" onClick={handleConnectWallet}>Connect Wallet {connected} {accounts}</Button>
+                <Button mr="2" onClick={handleConnectWallet}> {connected ? "Connected":'Connect Wallet'} {accounts && accounts} </Button>
                 <Button onClick={toggleColorMode}>
                     {colorMode === 'light' ? <SunIcon /> : <MoonIcon />}
                 </Button>
