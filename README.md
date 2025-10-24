@@ -16,7 +16,7 @@ CryptoConnect is a decentralized finance (DeFi) application that provides users 
 
 ### Get Started:
 To run CryptoConnect locally, follow these steps:
-1. Clone the repository: `git clone https://github.com/your-username/crypto-connect.git`
+1. Clone the repository: `git clone https://github.com/devnova777/crypto-connect.git`
 2. Install dependencies: `cd crypto-connect && npm install`
 3. Start the development server: `npm start`
 4. Visit `http://localhost:3000` in your browser to access CryptoConnect.
